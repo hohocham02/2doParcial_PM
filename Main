@@ -1,7 +1,12 @@
+import Clases.Car
+import Clases.Mario
+import Clases.Person
+import Clases.Phone
 import Clases.*
 
 fun main() {
     // TELEFONO
+    var myPhone = Phone()
     val myPhone = Phone()
     myPhone.getTurn()
     myPhone.turnON()
@@ -10,49 +15,27 @@ fun main() {
     println("---")
 
     // VEHICULO
+    var myCar = Car("Gris", "Hyundai", "Tucson", "MAX-0123")
     val myCar = Car("Gris", "Hyundai", "Tucson", "MAX-0123")
 
     println("---")
 
-    println("El vehículo está encendido? ${myCar.v_state}")
-    myCar.turnVON()
-    println("El vehículo está encendido? ${myCar.v_state}")
+@@ -29,12 +26,12 @@ fun main() {
 
     println("---")
 
-    println("Cuánta gasolina tiene el vehículo: ${myCar.gasolina}")
-    myCar.recharge(20.07f)
-    println("Cuánta gasolina tiene el vehículo: ${myCar.gasolina}")
-
-    println("---")
-
+    var vochoNegro = Car("VolksWagen", "Vocho")
     val vochoNegro = Car("VolksWagen", "Vocho")
     println("El color del Vocho es: ${vochoNegro.color}")
 
     println("---")
 
+    var pointer = Car (
     val pointer = Car (
         color = "Azul",
         marca = "Volkswagen",
         modelo = "Pointer"
-    )
-    println("El color del Pointer es: ${pointer.color}")
-
-    println("---")
-
-    // PERSONA
-    val people1 = Person (
-        "Max",
-        "Monroy",
-        "Masculino",
-        1.75f
-    )
-
-    println("---")
-
-    // MARIO
-    var player1 = Mario()
-    player1.collision("Pipe")
+@@ -59,4 +56,32 @@ fun main() {
     println("Vidas: ${player1.vidas}")
     player1.collision("Goomba")
     println("Vidas: ${player1.vidas}")
